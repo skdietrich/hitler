@@ -760,6 +760,48 @@
     .gallery-item.wide { grid-column: span 1; aspect-ratio: 4/3; }
     .gallery-item { aspect-ratio: 3/4; }
   }
+
+  /* ── HIGH-DPI LARGE PHONES (iPhone Pro Max, Pixel XL, Samsung Ultra, etc.)
+     Targets devices with high pixel density AND a large physical screen.
+     min-width 390px in CSS pixels = physical screens ~430px+ at 3x density    ── */
+  @media (max-width: 768px) and (min-width: 390px) and (-webkit-min-device-pixel-ratio: 2.5),
+         (max-width: 768px) and (min-width: 390px) and (min-resolution: 240dpi) {
+
+    /* Bump the root so all rem units scale up proportionally */
+    html { font-size: 20px; }
+
+    /* Hero */
+    .hero-eyebrow  { font-size: 0.65rem; letter-spacing: 0.3em; }
+    .hero-title    { font-size: 3rem; }
+    .hero-subtitle { font-size: 1.75rem; }
+    .hero-author   { font-size: 0.85rem; }
+    .hero-tagline  { font-size: 1.05rem; line-height: 1.85; }
+    .btn-primary, .btn-secondary { font-size: 0.8rem; padding: 1.1rem 1.8rem; }
+
+    /* Sections */
+    .section-label { font-size: 0.65rem; }
+    .section-title { font-size: 2rem; }
+
+    /* Body copy */
+    .premise-body p    { font-size: 1.05rem; }
+    .premise-pull-quote { font-size: 1.3rem; }
+    .excerpt-text      { font-size: 1.05rem; }
+    .chapter-title     { font-size: 1.15rem; }
+    .chapter-period    { font-size: 0.75rem; }
+    .chapter-num       { font-size: 0.68rem; }
+    .controversy-item p    { font-size: 1rem; }
+    .controversy-item h3   { font-size: 0.78rem; }
+    .controversy-response  { font-size: 0.95rem; }
+    .review-text       { font-size: 1.05rem; }
+    .review-byline     { font-size: 0.7rem; }
+    .author-name       { font-size: 2rem; }
+    .author-credentials { font-size: 0.7rem; }
+    .author-bio p      { font-size: 1.05rem; }
+    .gallery-item .caption { font-size: 0.6rem; }
+
+    /* Nav brand */
+    nav .brand { font-size: 0.7rem; }
+  }
 </style>
 </head>
 <body>
@@ -1061,4 +1103,3 @@
 
 </body>
 </html>
-
